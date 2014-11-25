@@ -1,0 +1,98 @@
+body {
+    background-color: #AAAAAA;
+    padding-left: 15%;
+}
+
+.dismiss {
+    display: none;
+}
+
+#gameBoard, #wrapStats {
+    padding-top: 1em;
+    padding-right: 1em;
+    display: none;
+    float: left;
+}
+#stats {
+    width: 200px;
+    border: solid #555555;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 0;
+}
+
+#stats h2 {
+    margin-top: 0;
+}
+
+.tileContainer {
+    margin-right: 7px;
+    margin-bottom: 7px;
+    border-radius: 10px;
+    border:solid #555555;
+}
+
+.tileContainer, .flipTransition, .back, .front{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.back {
+    z-index:2;
+    -webkit-transform:rotateY(0deg);
+    -moz-transform:rotateY(0deg);
+    -ms-transform:rotateY(0deg);
+    -o-transform:rotateY(0deg);
+    transform:rotateY(0deg);
+}
+
+.front {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+}
+
+.back, .front {
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.flip {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+}
+
+.flipTransition{
+    -webkit-transition:0.25s;
+    -moz-transition:0.25s;
+    -o-transition:0.25s;
+    transition:0.25s;
+
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    position:relative;
+}
+
+.tileContainer {
+    -webkit-perspective:1000;
+    -moz-perspective:1000;
+    -ms-perspective:1000;
+    -o-perspective:1000;
+    perspective:1000;
+    float: left;
+}

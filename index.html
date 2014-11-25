@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head lang="en">
+      <meta charset="UTF-8">
+      <title>Best Memory Game</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css" />
+   </head>
+
+   <body>
+      <h1>Impossibly Possible Memory Game!</h1>
+      <div class="space">
+         <button type="button" class="btn btn-primary newGame h1">New Game</button>
+         <button type="button" class="btn btn-default rules h1">Rules</button>
+      </div>
+
+      <main>
+         <div id="gameBoard">
+         </div> <!--Places the Game Board on page -->
+      </main>
+         <div id="wrapStats">
+            <div id="stats"> <!--Places game stats on page -->
+               <h2>Game Stats</h2>
+               <p id="matches"></p>
+               <p id="left"></p>
+               <p id="misses"></p>
+               <p id="passedTime"></p>
+            </div>
+         </div>
+      <div class="modal fade" id="rules" data-backdrop="static">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title">Rules</h4>
+               </div>
+               <div class="modal-body">
+                  <p>The goal is to get as many matches as possible</p>
+                  <p>with the fewest amount of missed matches total.</p>
+                  <p>Good luck and have fun!</p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary newGame" data-dismiss="modal">OK, let's go!</button>
+                  <button type="button" class="btn btn-default dismiss" data-dismiss="modal">Ok</button>
+               </div>
+            </div><!--/.modal-content-->
+         </div><!--/.modal-dialog-->
+      </div> <!--/.modal-->
+
+      <div class="modal fade" id="gameWin">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title">You Win!</h4>
+               </div>
+               <div class="modal-body">
+                  <p></p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary newGame" data-dismiss="modal">Play Again</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">View Finished Game</button>
+               </div>
+            </div><!--/.modal-content-->
+         </div><!--/.modal-dialog-->
+      </div><!--/.modal-->
+
+      <script src="js/jquery-2.1.1.js"></script>
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>
